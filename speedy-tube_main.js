@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Speedy Tube
 // @namespace    http://tampermonkey.net/
-// @version      0.3.2
+// @version      0.3.3
 // @description  A script to make YouTube videos play faster than 2x 
 // @author       groomyjohny
 // @include      https://*youtube.com/*
@@ -14,7 +14,7 @@ function debugLog(... p)
 {
     if (debugMode)
     {
-        console.log("[Speedy Tube]:",p)
+        console.log("[Speedy Tube]:",...p)
     }
 }
 let configuredRate = 3;
