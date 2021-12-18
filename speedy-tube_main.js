@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Speedy Tube
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.3
 // @description  A script to make YouTube videos play faster than 2x 
 // @author       groomyjohny
 // @include      https://*youtube.com/*
@@ -14,6 +14,6 @@ window.addEventListener("load", function(){
     let videos = document.getElementsByTagName("video");
     for (v in videos)
     {
-        v.defaultPlaybackSpeed = configuredSpeed;
+        v.playbackSpeed = configuredSpeed;
     }
 })
