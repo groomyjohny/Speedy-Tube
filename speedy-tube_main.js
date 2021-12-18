@@ -9,14 +9,23 @@
 // @downloadURL  https://github.com/groomyjohny/Speedy-Tube/blob/main/speedy-tube_main.js
 // ==/UserScript==
 
+let debugMode = true;
+function debugLog(... p)
+{
+    if (debugMode)
+    {
+        console.log("[Speedy Tube]:",p)
+    }
+}
 let configuredRate = 3;
 window.addEventListener("load", () => {
-    console.log("Waking up changing...")
+    debugLog("Waking up changing...")
     //this.setTimeout(() => {
         let videos = document.getElementsByTagName("video");
+        debugLog("videos are:",videos);
         for (let v in videos)
         {
-            console.log("Chaning speed...",v.playbackRate = configuredRate);
+            debugLog("Chaning speed...",v.playbackRate = configuredRate);
         }
    // })
    
